@@ -8,9 +8,11 @@ declare(strict_types=1);
 
 namespace BeastBytes\Mermaid\PieChart;
 
+use BeastBytes\Mermaid\Mermaid;
+use BeastBytes\Mermaid\MermaidInterface;
 use Stringable;
 
-class PieChart implements MermaidInterface, Stringable
+final class PieChart implements MermaidInterface, Stringable
 {
     public const TYPE = 'pie';
     private const SHOW_DATA = ' showData';
