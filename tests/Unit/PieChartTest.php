@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-use BeastBytes\Mermaid\PieChart;
+use BeastBytes\Mermaid\PieChart\PieChart;
 
 const TITLE = 'Title';
 const VALUES = [
