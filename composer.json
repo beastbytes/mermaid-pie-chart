@@ -1,7 +1,7 @@
 {
     "name": "beastbytes/mermaid-pie-chart",
     "type": "library",
-    "description": "Mermaid.js pie chart",
+    "description": "PHP for Mermaid.js pie charts",
     "keywords": [
         "mermaid",
         "pie chart"
