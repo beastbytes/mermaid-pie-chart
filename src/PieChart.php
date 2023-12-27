@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace BeastBytes\Mermaid;
+namespace BeastBytes\Mermaid\PieChart;
 
 use Stringable;
 
@@ -33,6 +33,7 @@ class PieChart implements MermaidInterface, Stringable
 
     public function render(): string
     {
+        /** @psalm-var list<string> $output */
         $output = [];
 
         $output[] = self::TYPE . ($this->showData ? self::SHOW_DATA : '');
