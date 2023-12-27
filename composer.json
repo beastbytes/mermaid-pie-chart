@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BeastBytes\\Mermaid\\": "src"
+            "BeastBytes\\Mermaid\\PieChart\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BeastBytes\\Mermaid\\Tests\\": "tests"
+            "BeastBytes\\Mermaid\\PieChart\\Tests\\": "tests"
         }
     },
     "config": {
