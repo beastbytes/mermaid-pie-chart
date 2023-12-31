@@ -23,11 +23,11 @@ test('Pie Chart', function () {
     expect($pieChart->render())
         ->toBe("<pre class=\"mermaid\">\n"
             . "pie\n"
-            . "  \"Value 1\" : 5.25\n"
-            . "  \"Value 2\" : 25.3\n"
-            . "  \"Value 3\" : 42\n"
-            . "  \"Value 4\" : 17.17\n"
-            . "  \"Value 5\" : 69\n"
+            . "  &quot;Value 1&quot; : 5.25\n"
+            . "  &quot;Value 2&quot; : 25.3\n"
+            . "  &quot;Value 3&quot; : 42\n"
+            . "  &quot;Value 4&quot; : 17.17\n"
+            . "  &quot;Value 5&quot; : 69\n"
             . '</pre>'
         )
     ;
@@ -39,11 +39,11 @@ test('Pie Chart showing data', function () {
     expect($pieChart->render())
         ->toBe("<pre class=\"mermaid\">\n"
             . "pie showData\n"
-            . "  \"Value 1\" : 5.25\n"
-            . "  \"Value 2\" : 25.3\n"
-            . "  \"Value 3\" : 42\n"
-            . "  \"Value 4\" : 17.17\n"
-            . "  \"Value 5\" : 69\n"
+            . "  &quot;Value 1&quot; : 5.25\n"
+            . "  &quot;Value 2&quot; : 25.3\n"
+            . "  &quot;Value 3&quot; : 42\n"
+            . "  &quot;Value 4&quot; : 17.17\n"
+            . "  &quot;Value 5&quot; : 69\n"
             . '</pre>'
         )
     ;
@@ -56,11 +56,11 @@ test('Pie Chart with title', function () {
         ->toBe("<pre class=\"mermaid\">\n"
             . "pie\n"
             . '  title '. TITLE . "\n"
-            . "  \"Value 1\" : 5.25\n"
-            . "  \"Value 2\" : 25.3\n"
-            . "  \"Value 3\" : 42\n"
-            . "  \"Value 4\" : 17.17\n"
-            . "  \"Value 5\" : 69\n"
+            . "  &quot;Value 1&quot; : 5.25\n"
+            . "  &quot;Value 2&quot; : 25.3\n"
+            . "  &quot;Value 3&quot; : 42\n"
+            . "  &quot;Value 4&quot; : 17.17\n"
+            . "  &quot;Value 5&quot; : 69\n"
             . '</pre>'
         )
     ;
@@ -73,11 +73,11 @@ test('Pie Chart with everything', function () {
         ->toBe("<pre class=\"mermaid\">\n"
             . "pie showData\n"
             . '  title '. TITLE . "\n"
-            . "  \"Value 1\" : 5.25\n"
-            . "  \"Value 2\" : 25.3\n"
-            . "  \"Value 3\" : 42\n"
-            . "  \"Value 4\" : 17.17\n"
-            . "  \"Value 5\" : 69\n"
+            . "  &quot;Value 1&quot; : 5.25\n"
+            . "  &quot;Value 2&quot; : 25.3\n"
+            . "  &quot;Value 3&quot; : 42\n"
+            . "  &quot;Value 4&quot; : 17.17\n"
+            . "  &quot;Value 5&quot; : 69\n"
             . '</pre>'
         )
     ;
