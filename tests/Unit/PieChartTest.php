@@ -8,14 +8,15 @@ declare(strict_types=1);
 
 use BeastBytes\Mermaid\PieChart\PieChart;
 
-const TITLE = 'Title';
-const VALUES = [
+defined('COMMENT') or define('COMMENT', 'Comment');
+defined('TITLE') or define('TITLE', 'Title');
+defined('VALUES') or define('VALUES', [
     'Value 1' => 5.25,
     'Value 2' => 25.3,
     'Value 3' => 42,
     'Value 4' => 17.17,
     'Value 5' => 69,
-];
+]);
 
 test('Pie Chart', function () {
     $pieChart = new PieChart(VALUES);
@@ -67,10 +68,11 @@ test('Pie Chart with title', function () {
 });
 
 test('Pie Chart with everything', function () {
-    $pieChart = new PieChart(VALUES, true, TITLE);
+    $pieChart = (new PieChart(VALUES, true, TITLE))->withComment(COMMENT);
 
     expect($pieChart->render())
         ->toBe("<pre class=\"mermaid\">\n"
+            . '%% ' . COMMENT . "\n"
             . "pie showData\n"
             . '  title '. TITLE . "\n"
             . "  &quot;Value 1&quot; : 5.25\n"

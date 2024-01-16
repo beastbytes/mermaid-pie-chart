@@ -8,12 +8,15 @@ declare(strict_types=1);
 
 namespace BeastBytes\Mermaid\PieChart;
 
+use BeastBytes\Mermaid\CommentTrait;
 use BeastBytes\Mermaid\Mermaid;
 use BeastBytes\Mermaid\MermaidInterface;
 use Stringable;
 
 final class PieChart implements MermaidInterface, Stringable
 {
+    use CommentTrait;
+
     public const TYPE = 'pie';
     private const SHOW_DATA = ' showData';
 
@@ -36,6 +39,7 @@ final class PieChart implements MermaidInterface, Stringable
         /** @psalm-var list<string> $output */
         $output = [];
 
+        $this->renderComment('', $output);
         $output[] = self::TYPE . ($this->showData ? self::SHOW_DATA : '');
 
         if ($this->title !== null) {
