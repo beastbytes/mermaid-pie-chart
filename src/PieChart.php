@@ -34,7 +34,7 @@ final class PieChart implements MermaidInterface, Stringable
         return $this->render();
     }
 
-    public function render(): string
+    public function render(array $attributes = []): string
     {
         /** @psalm-var list<string> $output */
         $output = [];
@@ -50,6 +50,6 @@ final class PieChart implements MermaidInterface, Stringable
             $output[] = Mermaid::INDENTATION . '"' . $name . '" : ' . $value;
         }
 
-        return Mermaid::render($output);
+        return Mermaid::render($output, $attributes);
     }
 }
