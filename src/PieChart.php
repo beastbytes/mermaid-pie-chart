@@ -1,55 +1,61 @@
 <?php
-/**
- * @copyright Copyright © 2023 BeastBytes - All rights reserved
- * @license BSD 3-Clause
- */
 
 declare(strict_types=1);
 
 namespace BeastBytes\Mermaid\PieChart;
 
 use BeastBytes\Mermaid\CommentTrait;
+use BeastBytes\Mermaid\Diagram;
 use BeastBytes\Mermaid\Mermaid;
-use BeastBytes\Mermaid\MermaidInterface;
-use Stringable;
+use BeastBytes\Mermaid\TitleTrait;
 
-final class PieChart implements MermaidInterface, Stringable
+final class PieChart extends Diagram
 {
     use CommentTrait;
+    use TitleTrait;
 
-    public const TYPE = 'pie';
-    private const SHOW_DATA = ' showData';
+    public const string SHOW_DATA = ' showData';
+    private const string TYPE = 'pie';
+    private const string VALUE = '"%s" : %s';
 
-    public function __construct(
-        /** @var non-empty-array<string, float|int> $values */
-        private readonly array $values,
-        private readonly bool $showData = false,
-        private readonly ?string $title = null
-    )
+    private bool $showData = false;
+    /** @var array<string, float|int> $values */
+    private array $values = [];
+
+    public function showData(): self
     {
+        $new = clone $this;
+        $new->showData = true;
+        return $new;
     }
 
-    public function __toString(): string
+    public function addValues(array $values): self
     {
-        return $this->render();
+        $new = clone $this;
+        $new->values = array_merge($this->values, $values);
+        return $new;
     }
 
-    public function render(array $attributes = []): string
+    public function withValues(array $values): self
+    {
+        $new = clone $this;
+        $new->values = $values;
+        return $new;
+    }
+
+    protected function renderDiagram(): string
     {
         /** @psalm-var list<string> $output */
         $output = [];
 
-        $this->renderComment('', $output);
+        $output[] = $this->renderComment('');
         $output[] = self::TYPE . ($this->showData ? self::SHOW_DATA : '');
-
-        if ($this->title !== null) {
-            $output[] = Mermaid::INDENTATION . 'title ' . $this->title;
-        }
+        $output[] = $this->renderTitle(Mermaid::INDENTATION);
 
         foreach ($this->values as $name => $value) {
-            $output[] = Mermaid::INDENTATION . '"' . $name . '" : ' . $value;
+            $output[] = Mermaid::INDENTATION . sprintf(self::VALUE, $name, $value);
         }
 
-        return Mermaid::render($output, $attributes);
+        return implode("\n", array_filter($output, fn($v) => !empty($v)));
     }
 }
