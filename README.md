@@ -33,19 +33,22 @@ echo Mermaid::create(PieChart::class)
 ```
 
 ## API
-### addValues()
+### PieChart
+PieChart represents a pie chart.
+
+#### addValues()
 Returns a new instance of `PieChart` with the given values added to any existing values.
 
 **_Note:_** New values with the same name as existing values will overwrite the existing values.
-#### Parameters
+##### Parameters
 | Name   | Type                      | Description                  |
 |--------|---------------------------|------------------------------|
 | values | array<string, float\|int> | Array of name => value pairs |
 **Return Type:** PieChart
 
-### render()
+#### render()
 Returns a string that is the Mermaid Pie Chart wrapped in a HTML `<pre class="mermaid">` tag.
-#### Parameters
+##### Parameters
 | Name       | Type                  | Description                       |
 |------------|-----------------------|-----------------------------------|
 | attributes | array<string, string> | Array of attribute => value pairs |
@@ -58,25 +61,25 @@ Returns a new instance of `PieChart` with `showData` set. The rendered Pie Chart
 
 **Return Type:** PieChart
 
-### withComment()
+#### withComment()
 Returns a new instance of `PieChart` with a comment.
-#### Parameters
+##### Parameters
 | Name    | Type   | Description |
 |---------|--------|-------------|
 | comment | string | The comment |
 **Return Type:** PieChart
 
-### withTitle()
+#### withTitle()
 Returns a new instance of `PieChart` with a title.
-#### Parameters
+##### Parameters
 | Name  | Type   | Description |
 |-------|--------|-------------|
 | title | string | The title   |
 **Return Type:** PieChart
 
-### withValues()
+#### withValues()
 Returns a new instance of `PieChart` with the given values.
-#### Parameters
+##### Parameters
 | Name   | Type                      | Description                  |
 |--------|---------------------------|------------------------------|
 | values | array<string, float\|int> | Array of name => value pairs |
