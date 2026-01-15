@@ -29,6 +29,10 @@ final class PieChart extends Diagram
         return $new;
     }
 
+    /**
+     * @param array<string, float|int> $values
+     * @return self
+     */
     public function addValues(array $values): self
     {
         $new = clone $this;
@@ -36,6 +40,10 @@ final class PieChart extends Diagram
         return $new;
     }
 
+    /**
+     * @param array<string, float|int> $values
+     * @return self
+     */
     public function withValues(array $values): self
     {
         $new = clone $this;
@@ -45,7 +53,7 @@ final class PieChart extends Diagram
 
     protected function renderDiagram(): string
     {
-        /** @psalm-var list<string> $output */
+        /** @var list<string> $output */
         $output = [];
 
         $output[] = $this->renderComment('');
