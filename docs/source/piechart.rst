@@ -1,17 +1,9 @@
 Pie Chart Class
-=============
+===============
 
 .. php:class:: PieChart
 
   Represents a Pie Chart
-
-  .. php:method:: render(array $attributes)
-
-    Render the Mermaid code enclosed in a <pre> tag
-
-    :param array $attributes: HTML attributes for the enclosing <pre> tag
-    :returns: Mermaid code enclosed in a <pre> tag
-    :rtype: string
 
   .. php:method:: addValues(array $values)
 
@@ -20,6 +12,14 @@ Pie Chart Class
     :param array $values: The Pie Chart values as *key=>value* pairs; the keys are the labels for the values
     :returns: A new instance of ``PieChart`` with the values added to existing values
     :rtype: Pie Chart
+
+  .. php:method:: render(array $attributes)
+
+    Render the Mermaid code enclosed in a <pre> tag
+
+    :param array $attributes: HTML attributes for the enclosing <pre> tag
+    :returns: Mermaid code enclosed in a <pre> tag
+    :rtype: string
 
   .. php:method:: showData()
 
