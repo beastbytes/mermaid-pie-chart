@@ -16,4 +16,8 @@ Mermaid Pie Chart allows creation of `Mermaid Pie Charts <https://mermaid.js.org
 
 .. seealso::
 
-  `Mermaid documentation <https://beastbytes.github.io/mermaid>`__
+   `Mermaid documentation <https://beastbytes.github.io/mermaid>`__
+
+   `Mermaid JS <https://mermaid.js.org>`__
+
+   `Mermaid JS Pie Charts <https://mermaid.js.org/syntax/pieChart.html>`__
