@@ -4,7 +4,7 @@
 Mermaid Pie Chart
 =================
 
-Mermaid Pie Chart allows creation of `Mermaid Pie Charts <https://mermaid.js.org/syntax/pieChart.html>`__ in PHP.
+Mermaid Pie Chart allows creation of `Mermaid JS Pie Charts <https://mermaid.js.org/syntax/pieChart.html>`__ in PHP.
 
 .. toctree::
    :maxdepth: 2
