@@ -33,7 +33,7 @@ PHP
 Generated Mermaid
 +++++++++++++++++
 
-::
+.. code-block:: html
 
     <pre class="mermaid>
     ---
@@ -50,7 +50,6 @@ Generated Mermaid
         "Magnesium" : 10.01
         "Iron" :  5
     </pre>
-
 
 Mermaid Diagram
 +++++++++++++++
