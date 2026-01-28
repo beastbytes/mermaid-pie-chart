@@ -3,51 +3,54 @@ Pie Chart Class
 
 .. php:class:: PieChart
 
-  Represents a Pie Chart
+    Represents a Pie Chart
 
-  .. php:method:: addValues(array $values)
+    .. php:method:: addValues(array $values)
 
-    Add Pie Chart Values
+        Add Pie Chart Values
 
-    :param array $values: The Pie Chart values as *key=>value* pairs; the keys are the labels for the values
-    :returns: A new instance of ``PieChart`` with the values added to existing values
-    :rtype: Pie Chart
+        :param array $values: The Pie Chart values as *key=>value* pairs; the keys are the labels for the values
+        :returns: A new instance of ``PieChart`` with the values added to existing values
+        :rtype: Pie Chart
 
-  .. php:method:: render(array $attributes)
+    .. php:method:: render(array $attributes = [])
 
-    Render the Mermaid code enclosed in a <pre> tag
+        Renders the diagram
 
-    :param array $attributes: HTML attributes for the enclosing <pre> tag
-    :returns: Mermaid code enclosed in a <pre> tag
-    :rtype: string
+        :param array $attributes: HTML attributes for the <pre> tag as name=>value pairs
 
-  .. php:method:: showData()
+            .. note:: The *mermaid* class is added
 
-    Show data values in the legend
+        :returns: Mermaid diagram code in a <pre> tag
+        :rtype: string
 
-    :returns: A new instance of ``PieChart`` that will show data values in the legend
-    :rtype: Pie Chart
+    .. php:method:: showData()
 
-  .. php:method:: withComment(string $comment)
+        Show data values in the legend
 
-    Set the chart comment
+        :returns: A new instance of ``PieChart`` that will show data values in the legend
+        :rtype: Pie Chart
 
-    :param string $comment: The comment
-    :returns: A new instance of ``PieChart`` with the comment
-    :rtype: Pie Chart
+    .. php:method:: withComment(string $comment)
 
-  .. php:method:: withValues(array $values)
+        Set the chart comment
 
-    Set Pie Chart values
+        :param string $comment: The comment
+        :returns: A new instance of ``PieChart`` with the comment
+        :rtype: Pie Chart
 
-    :param array $values: The Pie Chart values as *key=>value* pairs; the keys are the labels for the values
-    :returns: A new instance of ``PieChart`` with the values
-    :rtype: Pie Chart
+    .. php:method:: withValues(array $values)
 
-  .. php:method:: withTitle(string $title)
+        Set Pie Chart values
 
-    Set the chart title
+        :param array $values: The Pie Chart values as *key=>value* pairs; the keys are the labels for the values
+        :returns: A new instance of ``PieChart`` with the values
+        :rtype: Pie Chart
 
-    :param string $title: The title
-    :returns: A new instance of ``PieChart`` with the title
-    :rtype: Pie Chart
+    .. php:method:: withTitle(string $title)
+
+        Set the chart title
+
+        :param string $title: The title
+        :returns: A new instance of ``PieChart`` with the title
+        :rtype: Pie Chart
